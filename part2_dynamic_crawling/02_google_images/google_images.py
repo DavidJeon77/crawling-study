@@ -55,7 +55,7 @@ def run(playwright: PlaywrightContextManager, keyword: str, max_num: int) -> Non
 
             if pic_idx == max_num:
                 break
-        
+
         if pic_idx == max_num:
             break
 
@@ -84,4 +84,7 @@ def get_image_locators(page: Page, idx: int) -> Locator:
 
 
 if __name__ == "__main__":
-    get_google_images('dog', 10)
+    search_text = str(input("검색어를 입력하세요 : "))
+    search_num = int(input("가져올 이미지 숫자를 입력하세요 : "))
+    print("시작!")
+    get_google_images(search_text, search_num)
